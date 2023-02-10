@@ -2,7 +2,7 @@ from multiprocessing import Pool
 from time import sleep
 from typing import Dict
 
-touched_bit_rev: Dict[int, str] = {0: 'initializing...'}
+touched_bit_rev: Dict[int, str] = {0: "initializing..."}
 
 
 def increment_print_sleep(process_label: str, num_times: int = 5):
@@ -15,6 +15,6 @@ def increment_print_sleep(process_label: str, num_times: int = 5):
 
 
 with Pool(5) as pool:
-    results = pool.map(increment_print_sleep, 'abcdefg')
+    results = pool.map(increment_print_sleep, "abcdefg")
 
 print(f"Global {touched_bit_rev=}")
